@@ -1,0 +1,46 @@
+1. CSS stands for cascading style sheets
+   it is a simple design language.it add style to the web page.
+   and it is intended to simplify the process of making pages presentable.
+   
+   TYPES OF CSS SELECTORS:
+    1.ID selector
+    2.Tag/Type selector
+    3.class selector
+    4.Grouping selector
+    5.Customized selectors etc
+   
+
+2. CSS BOX MODEL:
+    it is the fundamental concept that defines how the elements spacing and dimensions are calculated. the box model is a rectangular box consists of content, padding, border, margin
+    The components of the box model are:
+    1. content: it is a actual text or image that is displayed in element
+    2. padding: it is the transparent space between the content and border of an element
+    3. border: it is a line that surrounds the padding and content within the element
+    4. margin: it is a transparent area added outside the border
+  Box model defines the layout of an HTML element and primary purpose is to explain the dimensions and spacing are calculated how they related to each other
+
+
+4.Lists in HTML:
+  There are three types of lists.
+  1.ordered list
+  2.unordered list
+  3.definition list
+  
+ 1.Ordered list: it is also called as numbered list. it is used to give numbering to the list items. it is a paired tag
+   syntax: <ol>-------</ol>
+   To specify the list items we use li tag. it is also a paired tag
+   syntax: <li>-------</li>
+   Attributes                Parameters 
+   type                     I, i, A, a, 1
+2.Unorderd list: it is also called as bulleted list. it is used to give bullets to the items. it is a paired tag.
+  syntax: <ul>--------</ul>
+  Attributes                 Parameters
+  type                        disc, circle, square
+3.Definition list: it is also called as descriptive list. it is used to give definitions to definition terms. it is also a paired tag.
+  syntax: <dl>---------</dl>
+  to specify definition term, we use dt tag. it is paired tag
+  syntax: <dt>-----------</dt>
+  to specify definitions data, we use dd tag. it is also a paired tag
+  syntax: <dd>----------</dd>
+
+    
