@@ -1,0 +1,108 @@
+1.<b> : Bold text
+ <i> : italic text
+ <em> : emphasized text
+ <mark> : marked text
+ <small> : smaller text
+ <del> : deleted text
+ <ins> : inserted text
+ <sub> : subscript text
+ <sup> : superscript text
+
+
+2.We can use the colspan and rowspan attribute, to merge cells in HTML.
+
+1) Merging Columns: Use the colspan attribute.
+2) Merging Rows: Use the rowspan attribute.
+
+Below is the example code to Merging Columns Example
+
+<html>
+<head>
+    <title>Merging Columns Example</title>
+</head>
+<body>
+<center><h1>Example for Merging Columns</h1><center>
+   <center> <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>age</th>
+            <th>Gender</th>
+        </tr>
+        <tr>
+            <td colspan="2">Merged Column</td>
+            <td>Phone number</td>
+        </tr>
+        <tr>
+            <td>temp data</td>
+            <td>temp data</td>
+            <td>temp data</td>
+        </tr>
+    </table></center>
+</body>
+</html>
+
+
+Below is the example code to Merging Rows Example:
+<html>
+<head>
+    <title>Example for Merging Rows</title>
+</head>
+<body>
+<center><h1>Example for Merging Rows</h1><center>
+   <center> <table border="1ps solid black">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Merged Row</td>
+            <td>Tempadata</td>
+            <td>Tempadata</td>
+        </tr>
+        <tr>
+            <td>Tempadata</td>
+            <td>Tempadata</td>
+        </tr>
+    </table><center>
+</body>
+</html>
+
+3.cellpadding attribute is used to change the space between the content to the inner edges of the cell and cellspacing controls the distance between the adjacent cells.
+
+
+4.A semantic element  describes about  meaning to both the browser and the developer. semantic elemnets are like <head> tag it will tell about webpage information like metadata of webpage and title of webpage ,<time> Represents a specific period in time.The semantic elements are:
+  1.<h1>-<h6>
+  2.<table>
+  3.<form>
+  4.<footer>
+  5.<header>
+  6.<summary>
+  7.<small>
+  8.<section>
+  9.<figure>
+  10.<mark>
+  11.<hgroup>
+  12.<figcaption>
+
+5.<html>
+<head>
+    <title>Background Image Example</title>
+    <style>
+        body {
+            background-image: url('sea.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Webpage</h1>
+    <p>This webpage has a background image.</p>
+</body>
+</html>
+
+
+6.The alt attribute in HTML, provides alternative text for an element that cannot be rendered. The alt attribute provides alternative information text for an image if a user cannot view it, due to a slow connection.
+
