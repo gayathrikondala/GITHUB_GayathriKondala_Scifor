@@ -1,0 +1,160 @@
+<!--Shopsy webpage overview:
+•	Online store specializing in fashion wear.
+•	Attractive background and fixed navigation bar.
+•	Navigation links for Men, Women, and Kids fashion wear.
+•	Prominent display of store title.
+•	Scrolling marquee announcing promotional sale.
+Main content:
+•	Navigation to Men and Women and Kids pages.
+•	Forms for account registration, login, and password recovery.
+•	Pages for cart and Wishlist.
+User interaction:
+•	Clicking tabs redirects to specific pages (e.g., login, cart, Men's wear)-->
+<html>
+<head>
+    <title>Shopsy</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('bg.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+        }
+        h1 {
+            font-size: 100px;
+        }
+        sub {
+            font-size: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 20px;
+            text-align: center;
+        }
+        img {
+            height:200px;
+            width:200px;
+            background-color: skyblue;
+        }
+        .btn-cart {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .btn-wishlist {
+            background-color: orange;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .btn-cart:hover {
+            background-color: darkgreen;
+        }
+        .btn-wishlist:hover {
+            background-color: darkorange;
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
+        .navbar .left {
+            float: left;
+        }
+        .navbar .left a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar .left input {
+            float: center;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 21px;
+            text-decoration: none;
+        }
+        .navbar .left a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .navbar .right {
+            float: right;
+        }
+        .navbar .right a {
+            float: right;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar .right a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .content {
+            padding-top: 60px;
+        }
+        .marquee {
+            margin: 20px 0;
+            font-size: 24px;
+            color: black;
+            font-weight: bold;
+        }
+        .temp-image {
+            position: fixed;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 200px; 
+        }
+        .logo-image {
+            position: fixed;
+            left: 10px;
+            top: 60px;
+            width: 100px; 
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="left">
+            <a href="Childpages/men.html">Men</a>
+            <a href="Childpages/women.html">Women</a>
+            <a href="Childpages/kids.html">Kids</a>
+            <a href="#Home&Living">Home&Living</a>
+            <a href="#Beauty">Beauty</a>
+            <input type="text" placeholder=" 🔍Search...">
+        </div>
+        <div class="right">
+            <a href="Childpages/whishList">WhishList</a>
+            <a href="Childpages/cart.html">Cart</a>
+            <a href="Childpages/login.html">Login</a>
+        </div>
+    </div>
+    <div class="content">
+        <center>
+            <h1><i>Shopsy</i><sub>A Online Store</sub></h1>
+        </center>
+        <div class="marquee">
+            <marquee><i>Big Billion Sale will be started soon! get 10% discount with coupon code <b>Shopsynew10</b></i></marquee>
+        </div>
+    </div>
+</body>
+</html>
