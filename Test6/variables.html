@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>
+            let, var, const values
+        </title>
+    </head>
+    <body>
+        <script>
+            var varVariable = "Gayathri";
+            let letVariable = "gayathri";
+            const constVariable = "Gayathri";
+
+            console.log("Global scope:");
+            console.log("varVariable:", varVariable); 
+            console.log("letVariable:", letVariable); /
+            console.log("constVariable:", constVariable); 
+
+
+        function demonstrateVarAndLet() {
+    
+        var outerVar = "Outer var";
+        let outerLet = "Outer let";
+
+        console.log("Before block:");
+        console.log("outerVar:", outerVar); 
+        console.log("outerLet:", outerLet); 
+
+    {
+        
+        var outerVar = "Inner var"; 
+        let outerLet = "Inner let"; 
+
+        console.log("Inside block:");
+        console.log("outerVar:", outerVar); 
+        console.log("outerLet:", outerLet); 
+    }
+
+    console.log("After block:");
+    console.log("outerVar:", outerVar); 
+    console.log("outerLet:", outerLet); 
+}
+
+demonstrateVarAndLet();
+        </script>
+    </body>
+</html>
