@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Voting Eligibility programme</title>
+    <script>
+        function checkEligibility() {
+            const age = prompt("Enter your age:");
+            var message = (parseInt(age) >= 18) ? "Congrats, You are eligible to vote. Thank you" : "Sorry, You are not eligible to vote.";
+            document.getElementById("message").innerText = message;
+        }
+    </script>
+</head>
+<body>
+   <center> <h1 style="color: blue; font-style: italic;">Voting Eligibility checking</h1>
+    <button onclick="checkEligibility()">Click Here to check the Eligibility For voting</button>
+    <h1 id="message" style="color: blueviolet;"></h1></center>
+</body>
+</html>

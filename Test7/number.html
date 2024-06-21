@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Program to Check Positive, Negative, or Zero</title>
+    <script>
+        function numcheck() {
+            let n = prompt("Enter a Number:");
+            let output;
+            let number = parseFloat(n); 
+
+         if (number > 0) {
+                output = "Positive Number";
+            } else if (number < 0) {
+                output = "Negative Number";
+            } else {
+                output = "Number is Zero";
+            }
+
+            document.getElementById("ans").innerText = output;
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <h1 style="color: blue; font-style: italic;">Program to Check if a Number is Positive, Negative, or Zero</h1>
+        <button onclick="numcheck()">Click here to enter the number</button>
+        <h1 id="ans" style="color: blueviolet;"></h1>
+    </center>
+</body>
+</html>

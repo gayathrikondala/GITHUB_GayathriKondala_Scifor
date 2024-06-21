@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Print The Day Of the Week</title>
+    <script>
+        function weekday() {
+            const n = prompt("Enter a number in the Range of 1 - 7:");
+            var day;
+
+            switch (parseInt(n)) {
+                case 1:
+                    day = "Monday";
+                    break;
+                case 2:
+                    day = "Tuesday";
+                    break;
+                case 3:
+                    day = "Wednesday";
+                    break;
+                case 4:
+                    day = "Thursday";
+                    break;
+                case 5:
+                    day = "Friday";
+                    break;
+                case 6:
+                    day = "Saturday";
+                    break;
+                case 7:
+                    day = "Sunday";
+                    break;
+                default:
+                    day = "Invalid Number";
+                    break;
+            }
+
+            document.getElementById("day").innerText = day;
+        }
+    </script>
+</head>
+<body>
+   <center> <h1 style="color: blue; font-style: italic;">Print The Day Of the Week</h1><br><br>
+    <button  onclick="weekday()">Click here to Enter the Number</button>
+    <h1 id="day" style="color: brown;"></h1></center>
+</body>
+</html>

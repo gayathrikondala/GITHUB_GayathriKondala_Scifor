@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>Print Numbers from 1 to 10</title>
+    <script>
+        function numbers() {
+            var result = "";
+            for (var i = 1; i <= 10; i++) {
+                result += i + "<br>";
+            }
+            document.getElementById("ans").innerHTML = result;
+        }
+    </script>
+</head>
+<body onload="numbers()">
+   <center> <h1>Print Numbers from 1 to 10</h1>
+    <div id="ans" style="color: blue;"></div></center>
+</body>
+</html>
