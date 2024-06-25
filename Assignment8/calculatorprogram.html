@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>Basic Calculator</title>
+</head>
+<body>
+    <script>
+        let a, b;
+        function add(a, b) {
+            return a + b;
+        }
+
+        function subtract(a, b) {
+            return a - b;
+        }
+
+        function multiply(a, b) {
+            return a * b;
+        }
+
+        function divide(a, b) {
+            if (b === 0) {
+                return "Division by zero is not allowed.";
+            }
+            return a / b;
+        }
+
+        function valuea() {
+            a = parseFloat(prompt("Enter the A Value:"));
+            b = parseFloat(prompt("Enter the B Value:"));
+        }
+
+        function op() {
+            let opt = prompt("Select the operation: Addition, Subtraction, Multiplication, or Division").toLowerCase();
+
+            let result;
+            switch (opt) {
+                case 'addition':
+                    result = add(a, b);
+                    break;
+                case 'subtraction':
+                    result = subtract(a, b);
+                    break;
+                case 'multiplication':
+                    result = multiply(a, b);
+                    break;
+                case 'division':
+                    result = divide(a, b);
+                    break;
+                default:
+                    result = "Error: Invalid operation.";
+            }
+
+            document.getElementById("ans").innerText = result;
+        }
+    </script>
+    <center>
+        <h1 style="color: blue; font-style: italic;">Calculator Programme</h1><br><br>
+        <h1 style="color:black; font-style: italic;">Click Below to Enter the A and B values</h1>
+        <button onclick="valuea()" style="color: goldenrod;">Click Here</button><br><br>
+        <h1 style="color:black; font-style: italic;">Click here to Enter operation</h1>
+        <button onclick="op()" style="background-color: goldenrod;">Click Here</button>
+        <h1 id="ans" style="color: blueviolet;"></h1>
+    </center>
+</body>
+</html>
