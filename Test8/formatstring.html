@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Format String</title>
+</head>
+<body>
+    <center><h1>String</h1>
+
+    <script>
+        formatString();
+        function formatString() {
+            var name = prompt("Enter your name:");
+
+            const upper = name.toUpperCase();
+            document.write("Upper Case: ", upper, "<br>");
+
+            const lower = name.toLowerCase();
+            document.write("Lower Case: ", lower, "<br>");
+
+            const substring = name.substring(2, 6);
+            document.write("Substring ", substring, "<br>");
+        }
+    </script>
+    </center>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Manipulating Array</title>
+</head>
+<body>
+    <script>
+        manipulateArray();
+
+        function manipulateArray() {
+
+            var input = prompt("enter strings Separated by Comma:");
+
+            var input = input.split(',').map(char => char.trim());
+        
+            input.push("VOLVO");
+            input.push("RANGEROVER");
+            input.pop();
+
+            for (var i = 0; i < input.length; i++) {
+                input[i] = input[i].toUpperCase();
+            }
+            var output = input.join(", ");
+
+            document.write(`<h1>Modified Array is: <h3 style="color: blue;"> ${output}</h3></h1>`);
+        }
+    </script>
+    </center>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title> date object</title>
+</head>
+<body>
+    <center><h1 style="font-style: italic;">Date Adjust</h1>
+    <b><label for="inputDate">Enter the date</label></b>
+    <input type="date" id="inputDate">
+    <button onclick="adjustDate()">Adjust Date</button>
+
+    <h2>Current Month:</h2><h1 style="color: blue;" id="currentMonth"></h1>
+    <h2>Adjusted Date:</h2><h1 style="color: brown;" id="adjustedDate"></h1>
+    <h2>Adjusted Year:</h2><h1 style="color: burlywood;" id="adjustedYear"></h1>
+</center>
+    <script>
+        function adjustDate() {
+            const inputDateValue = document.getElementById('inputDate').value;
+            const inputDate = new Date(inputDateValue);
+
+            let currentMonth = inputDate.getMonth() + 1; // Months are zero-based in JavaScript
+
+            document.getElementById("currentMonth").innerText = currentMonth;
+
+            let nextMonth = (currentMonth % 12);
+            let nextYear = inputDate.getFullYear() + (nextMonth === 0 ? 1 : 0);
+
+            let adjustedDate = new Date(inputDate);
+            adjustedDate.setMonth(nextMonth);
+            adjustedDate.setFullYear(nextYear);
+
+            adjustedDate.setDate(15);
+
+            let adjustedYear = adjustedDate.getFullYear();
+
+            document.getElementById('adjustedDate').innerText = adjustedDate.toDateString();
+            document.getElementById('adjustedYear').innerText = adjustedYear;
+        }
+    </script>
+</body>
+</html>

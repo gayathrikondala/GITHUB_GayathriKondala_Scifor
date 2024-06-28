@@ -1,0 +1,29 @@
+<html >
+<head>
+    <title>
+        Reverse and Sort Array
+    </title>
+</head>
+<body>
+    <h1>Sorted Array</h1>
+
+    <script>
+        function reverseAndSortArray() {
+            const inputString = prompt('Enter characters separated by commas (e.g., a, b, c):');
+            const charArray = inputString.split(',').map(char => char.trim());
+            const reverse = charArray.slice().reverse();
+            const sortedArray = reverse.sort();
+            return sortedArray;
+        }
+
+        const sortedArray = reverseAndSortArray();
+
+        document.write('<h2>Sorted Array:</h2>');
+        document.write('<ol>');
+        sortedArray.forEach(function(char) {
+            document.write(`<li>${char}</li>`);
+        });
+        document.write('</ol>');
+    </script>
+</body>
+</html>

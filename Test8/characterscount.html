@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title> characters count</title>
+
+</head>
+<body>
+    <h1>characters Count</h1>
+    <script>
+        function Count_arr(arr) {
+            const count = {};
+
+            arr.forEach(char => {
+                if (count[char]) {
+                    count[char]++;
+                } else {
+                    count[char] = 1;
+                }
+            });
+
+            return count;
+        }
+
+        const myarr = ['a', 'b', 'a', 'c', 'b', 'a', 'd','g','a','s','k','g','j','g','j'];
+        const ans = Count_arr(myarr);
+
+        document.write('<h1>Count Results:</h1>');
+        for (var i in ans) {
+            document.write(`<h1>${i}: ${ans[i]}</h1>`);
+        }
+    </script>
+</body>
+</html>
