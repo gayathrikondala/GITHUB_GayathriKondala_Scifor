@@ -18,7 +18,7 @@
                     html += '</ul>';
                     document.getElementById('output').innerHTML = html;
                 } else {
-                    console.error('Request failed. Error code: ' + xhr.status);
+                    console.error('Failed:' + xhr.status);
                 }
             };
             xhr.onerror = function() {
