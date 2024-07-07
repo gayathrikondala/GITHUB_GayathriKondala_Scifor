@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Example</title>
+    <script>
+        function fetchData() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'user.json', true);
+            xhr.onload = function() {
+                if (xhr.status >= 200 && xhr.status < 400) {
+                    var data = JSON.parse(xhr.responseText);
+                    var html = '<h2>User List</h2><ul>';
+                    data.forEach(function(user) {
+                        html += '<li><strong>ID:</strong> ' + user.id + ', <strong>Name:</strong> ' + user.name + '</li>';
+                    });
+                    html += '</ul>';
+                    document.getElementById('output').innerHTML = html;
+                } else {
+                    console.error('Failed:' + xhr.status);
+                }
+            };
+            xhr.onerror = function() {
+                console.error('Request failed');
+            };
+            xhr.send();
+        }
+    </script>
+</head>
+<body>
+    <center><h1 style="color:black;">Click below button</h1>
+    <button onclick="fetchData()">Click here to Fetch Data</button>
+    <div id="output"></div></center>
+</body>
+</html>
