@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <title>API Example</title>
-    <style>   
+    <title>Fetch API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
         .todo {
             margin-bottom: 7px;
             padding: 9px;
-            background-color:lightgoldenrodyellow;
+            background-color: lightgoldenrodyellow;
             border: 1px solid black;
         }
         .todo h2 {
@@ -18,21 +22,19 @@
 </head>
 <body>
     <div class="container">
-        <h1>Fetch API Example</h1>
-        <div id="todoContainer">
-        
-        </div>
+        <h1>Fetch API</h1>
+        <div id="todoContainer"></div>
     </div>
 
     <script>
         function fetchData() {
-            fetch('https://jsonplaceholder.typicode.com/todos')
+            fetch('https://dummyjson.com/todos')
                 .then(response => response.json())
                 .then(data => {
                     const todoContainer = document.getElementById('todoContainer');
-                    todoContainer.innerHTML = ''; 
+                    todoContainer.innerHTML = '';
 
-                    data.forEach(todo => {
+                    data.todos.forEach(todo => {
                         const todoDiv = document.createElement('div');
                         todoDiv.classList.add('todo');
                         todoDiv.innerHTML = `
