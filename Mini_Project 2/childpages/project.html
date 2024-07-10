@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #C0C0C0;
+            font-family: 'Arial', sans-serif;
+        }
+        .tab-content {
+            display: none;
+            margin-top: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .btn-custom {
+            background-color: #333;
+            color: #C0C0C0;
+            border: 1px solid #C0C0C0;
+            margin: 5px;
+        }
+        .btn-custom:hover {
+            background-color: #444;
+        }
+        .project {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        .project:hover {
+            transform: scale(1.05);
+        }
+        .project img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+        .orange {
+            color: orange;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <a class="navbar-brand" href="../Index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        </nav>
+    <div class="container">
+        <h1 class="text-center orange">My Projects</h1><br>
+        <div class="text-center">
+            <button class="btn btn-custom" onclick="showTab('iot')">IoT</button>
+            <button class="btn btn-custom" onclick="showTab('deep-learning')">Deep Learning</button>
+        </div>
+
+        <div id="iot" class="tab-content">
+            <div class="project">
+                <h2 class="orange">IOT Based Automatic Saline Monitoring System using Node MCU</h2>
+               
+                <p>An IOT-based Automatic Saline Monitoring System is proposed to monitor the level of electrolyte. When fluid level is low, it will alert the observer through an alarm at the control room.</p>
+                <p>Generally, in almost all hospitals, an assistant or nurse is responsible for monitoring the level of the electrolyte. Unfortunately, sometimes they may forget to change the bottle at the right time due to their busy schedule or unexpected circumstances. This may create a problem for the patient because the reverse flow of blood will start, potentially leading to severe infections.</p>
+                <p>To overcome this situation, an IoT-based Automatic Saline Monitoring System is proposed to monitor the level of electrolyte. Frequently the quantity of saline is measured, and the data is stored in the cloud. By using the data, we can alert the observer through the app and alarm, as well as sending a text message to the doctor’s mobile phone (similarly to how we are receiving notification of mobile data usage.</p>
+                <center><img src="/Images/iot.jpeg" height="30%" width="30%" alt="IoT Project 1"></center>
+                <h6 class="orange" style="margin-top: 20px;">Advantages</h6>
+                <ul>
+                    <li>Continuous monitoring of saline levels.</li>
+                    <li>Reduces the risk of reverse blood flow and infections.</li>
+                    <li>Automated alerts to nurses and doctors.</li>
+                    <li>Data storage in the cloud for future reference.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="deep-learning" class="tab-content">
+            <div class="project">
+                <h2 class="orange">Labeling Of The Images In The DataSets Using Deep Learning Alogorithms</h2>
+                <p>Trained a neural network model to classify images of clothing like sneakers
+                    and shirts.</p>
+                    <p>In this technique, a model is trained on a large dataset of labeled images, where each image is associated with one or more predefined labels. 
+                    The model learns the patterns and features that are indicative of each label, allowing it to predict the appropriate labels for new, unseen images.</p>
+                   <p>Image labeling is a technique for recognizing and labeling various elements in images. These tags are then used to train computer vision models to recognize specific objects in images.Data labeling in computer vision is the process of applying tags to raw data such as images and videos. Each tag specifies an object class connected with the data, which includes photographs and videos. Each tag indicates an object class connected with the data. Unstructured data is labeled by supervised machine learning algorithms to detect a given item type. It allows these models to make sense of the data, which benefits model development.</p>
+                    <center><img src="/Images/deep.jpg" height="30%" width="30%" alt="IoT Project 1"></center>
+                <h6 class="orange" style="margin-top: 20px;">Advantages</h6>
+                <ul>
+                    <li>Increased accuracy in predictions.</li>
+                    <li>Automated feature extraction.</li>
+                    <li>Ability to handle large amounts of data.</li>
+                    <li>Improved decision-making processes.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</body>
+</html>

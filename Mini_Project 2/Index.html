@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gayathri Kondala</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <style>
+        body {
+            background-image: url('Images/pxfuel (1).jpg');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            animation: fadeIn 4s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+            color: silver;
+        }
+
+        h2 {
+            text-align: center;
+            animation: fadeInLeft 5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-500px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(500px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .navbar-custom {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-size: 1.2em;
+            margin-right: 20px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px 0;
+        }
+
+        .footer .nav-link {
+            color: #C0C0C0;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .footer .nav-link:hover {
+            background-color: #444;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <a class="navbar-brand" href="#">My Portfolio</a>
+    </nav>
+    <section class="welcome-section">
+        <div class="container">
+            <h1 style="text-align: center; color:black;" class="welcome-message">Welcome to My Portfolio</h1>
+            <p style="text-align: center; color:black;" class="welcome-description">Explore my work and skills</p>
+        </div>
+    </section>
+    <h2 style="text-align: center; color:silver;">Gayathri Kondala<sub style="font-size: small; vertical-align: sub; font-family: 'Arial, sans-serif';">Web developer</sub></h2>
+    <div class="footer">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+            <div class="collapse navbar-collapse" id="navbarNavFooter">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="childpages/aboutme.html">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="childpages/project.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="childpages/gallary.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="childpages/contactme.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

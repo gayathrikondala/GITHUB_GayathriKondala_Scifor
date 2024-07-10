@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.welcome-section {
+    background:silver;
+    padding: 7px 0;
+    text-align: center;
+}
+
+.navbar-custom {
+    background-color: #343a40; 
+}
+
+.navbar-dark .navbar-brand,
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-nav .nav-link {
+    color: white; /* Set link color to white */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ddd; /* Optional: Change color on hover */
+}

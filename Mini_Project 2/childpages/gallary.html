@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  height: 20%;
+  width: 30%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <a class="navbar-brand" href="../Index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        </nav>
+
+<h2 style="text-align:center;color: silver;">My Arts</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="../Images/d4.jpeg" style="width:100%;" alt="The Minny Mouse">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="../Images/d2.jpeg" style="width:100%;" alt="The Symbol Of Love">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="../Images/d3.jpeg" style="width:100%;" alt="An Ora Of Girl">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="../Images/d2.jpeg" style="width:100%;" alt="A Girl">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="../Images/d5.jpg" style="width:100%;" alt="Crying Baby">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="../Images/d6.jpg" style="width:100%;" alt="Music">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="../Images/d4.jpeg" style="width:100%" onclick="currentSlide(1)" alt="The Minny Mouse">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="../Images/d1.jpeg" style="width:100%" onclick="currentSlide(2)" alt="The Symbol Of Love">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="../Images/d3.jpeg" style="width:100%" onclick="currentSlide(3)" alt="An Ora Of Girl">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="../Images/d2.jpeg" style="width:100%" onclick="currentSlide(4)" alt="A Girl">
+    </div>
+    <div class="column">
+        <img class="demo cursor" src="../Images/d5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Crying Baby">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="../Images/d6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Music">
+      </div>
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+</body>
+</html>
