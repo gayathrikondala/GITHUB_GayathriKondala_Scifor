@@ -6,39 +6,89 @@
   <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    #root {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+    }
+    input {
+      width: 50px;
+      padding: 5px;
+      margin: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
-    <center>
-
   <div id="root"></div>
 
   <script type="text/babel">
     const CounterContext = React.createContext();
+    
     function CounterProvider({ children }) {
       const [count, setCount] = React.useState(0);
-      const increment = () => setCount(count + 1);
-      const decrement = () => setCount(count - 1);
+      const increment = (value) => setCount(count + value);
+      const decrement = (value) => setCount(count - value);
       return (
         <CounterContext.Provider value={{ count, increment, decrement }}>
           {children}
         </CounterContext.Provider>
       );
     }
+    
     function CounterDisplay() {
       const { count } = React.useContext(CounterContext);
       return <h1>Count: {count}</h1>;
     }
+    
     function CounterControls() {
       const { increment, decrement } = React.useContext(CounterContext);
+      const [value, setValue] = React.useState(1);
 
       return (
         <div>
-         
-          <button onClick={increment}>Increment</button>
-          <button onClick={decrement}>Decrement</button>
+          <input
+            type="number"
+            value={value}
+            onChange={(e) => setValue(Number(e.target.value))}
+          />
+          <button onClick={() => increment(value)}>Increment</button>
+          <button onClick={() => decrement(value)}>Decrement</button>
         </div>
       );
     }
+    
     function App() {
       return (
         <CounterProvider>
@@ -50,9 +100,8 @@
         </CounterProvider>
       );
     }
+    
     ReactDOM.render(<App />, document.getElementById('root'));
   </script>
-  </center>
-
 </body>
 </html>
