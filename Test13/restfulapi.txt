@@ -1,0 +1,12 @@
+What is a RESTful API?
+
+A RESTful API is a type of application programming interface(API) that allows two computer systems to securely exchange information over the internet.
+
+RESTful APIs have several advantages, including:
+Flexibility
+•Data is not tied to resources or methods, so RESTful APIs can handle multiple types of calls, return different data formats, and even change structurally.
+Scalability
+•RESTful APIs are more scalable than other APIs.
+Interoperability
+•RESTful APIs use common web technologies to expose data models and functionality in a standardized way, which can improve interoperability across platforms.
+•Developers don't need to install additional software or libraries when creating a RESTful API.
